@@ -21,5 +21,3 @@ private typedef RedrawParams = {
 	project:Projector,
 	unproject:Projector,
 }
-
-private typedef Projector = Array<Float>->Array<Float>;
