@@ -51,6 +51,7 @@ extern class Map extends ReactComponentOfProps<{
 	?viewState:ViewState,
 	?interactionState:Dynamic,
 	?oldViewState:ViewState,
+	?onLoad:Void->Void,
 	?onViewStateChange:{viewState:ViewState, interactionState:InteractionState, oldViewState:ViewState}->Void,
 	?onInteractionStateChange:InteractionState->Void,
 	?onHover:Function,
@@ -72,4 +73,6 @@ extern class Map extends ReactComponentOfProps<{
 	?onTransitionInterrupt:Function,
 	?onTransitionEnd:Function,
 	?children:ReactFragment,
-}> {}
+}> {
+	function getMap():Dynamic; // the original (non-react) map object
+}
