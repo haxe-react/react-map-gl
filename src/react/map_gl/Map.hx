@@ -1,12 +1,14 @@
 package react.map_gl;
 
 import react.ReactComponent;
+import react.BaseProps;
 import haxe.Constraints;
 import haxe.extern.EitherType;
 import js.html.webgl.*;
 
 @:jsRequire('react-map-gl', 'default')
 extern class Map extends ReactComponentOfProps<{
+	> BasePropsWithChildren,
 	?attributionControl:Bool,
 	?disableTokenWarning:Bool,
 	?gl:RenderingContext,
@@ -72,7 +74,8 @@ extern class Map extends ReactComponentOfProps<{
 	?onTransitionStart:Function,
 	?onTransitionInterrupt:Function,
 	?onTransitionEnd:Function,
-	?children:ReactFragment,
+	
+	?asyncRender:Bool,
 }> {
 	function getMap():Dynamic; // the original (non-react) map object
 }

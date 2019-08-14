@@ -1,12 +1,14 @@
 package react.map_gl;
 
 import react.ReactComponent;
+import react.BaseProps;
 import haxe.Constraints;
 import haxe.extern.EitherType;
 import js.html.webgl.*;
 
 @:jsRequire('react-map-gl', 'StaticMap')
 extern class StaticMap extends ReactComponentOfProps<{
+	> BasePropsWithChildren,
 	?attributionControl:Bool,
 	?disableTokenWarning:Bool,
 	// ?gl {WebGLContext} ==EXPERIMENTAL==
